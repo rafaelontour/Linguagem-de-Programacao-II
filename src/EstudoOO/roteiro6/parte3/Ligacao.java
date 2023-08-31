@@ -56,15 +56,18 @@ public class Ligacao {
     }
 
     public int calcularValor(Tempo hmsINI, Tempo hmsFIM) {
-        int vHora = Math.abs((hmsFIM.getHora() - hmsINI.getHora()) * 60);
-        int vMinutos = Math.abs(hmsFIM.getMinuto() - hmsINI.getMinuto());
-
-        if (hmsINI.getSegundo() > hmsFIM.getSegundo()) {
-            if ((60 - hmsINI.getSegundo() + hmsFIM.getSegundo()) > 20) { vMinutos++; }
-        } else {
-            if (Math.abs((hmsINI.getSegundo() - hmsINI.getSegundo())) > 20) { vMinutos++; }
+        int vMinutos = 0;
+        if (hmsINI.getHora() < hmsFIM.getHora()) { vMinutos += 60; }
+        if (hmsINI.getMinuto() < hmsFIM.getMinuto()) {
+            if (hmsINI.getSegundo() < hmsFIM.getSegundo()) {
+                vMinutos += hmsFIM.getMinuto() - hmsINI.getMinuto();
+            }
+        } else if (hmsINI.getMinuto() == hmsFIM.getMinuto()) {
+            if ((60 - hmsINI.getSegundo() + hmsFIM.getSegundo()) > 20) {
+                vMinutos++;
+            }
         }
-        return vMinutos + vHora;
-    }
+        return vMinutos;
 
+    }
 }
