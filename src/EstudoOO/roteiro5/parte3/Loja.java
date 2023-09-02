@@ -12,22 +12,19 @@ public class Loja {
 
 
     // Construtores
-
     public Loja(String nomeFantasia, String razaoSocial, String cnpj) {
         this.nomeFantasia = nomeFantasia;
-        this.razaoSocial = razaoSocial;
-        this.cnpj = cnpj;
+        this.razaoSocial  = razaoSocial;
+        this.cnpj         = cnpj;
     }
 
     public Loja(String nomeFantasia, String cnpj) {
         this(nomeFantasia, nomeFantasia, cnpj);
 
-
     }
 
 
     // Getters
-
     public String getNomeFantasia() { return this.nomeFantasia; }
     public String getRazaoSocial() { return this.razaoSocial; }
     public String getCnpj() { return this.cnpj; }
@@ -36,28 +33,27 @@ public class Loja {
 
 
     // Setters
-
     public void setNomeFantasia(String nomeFantasia) { this.nomeFantasia = nomeFantasia; }
     public void setRazaoSocial(String razaoSocial) { this.razaoSocial = razaoSocial; }
     public void setCnpj(String cnpj) { this.cnpj = cnpj; }
     public void setValorFat(double valorFat) { this.valorFat = valorFat; }
     public void setArea(double area) { this.area = area; }
 
-    // Outros métodos
 
-    public static void comparar(Loja lojaA, Loja lojaB) {
+    // Outros métodos
+    public static Loja comparar(Loja lojaA, Loja lojaB) {
         if (lojaA.getValorFat() > lojaB.getValorFat()) {
-            System.out.println("Loja com maior faturamento: " + lojaA.getNomeFantasia());
+            return lojaA;
         } else {
-            System.out.println("Loja com maior faturamento: " + lojaB.getNomeFantasia());
+            return lojaB;
         }
     }
 
-    public void comparar_naoEstatica(Loja lojaB) {
+    public Loja comparar_naoEstatica(Loja lojaB) {
         if (this.getValorFat() > lojaB.getValorFat()) {
-            System.out.println("Loja com maior faturamento: " + this.nomeFantasia);
+            return this;
         } else {
-            System.out.println("Loja com maior faturamento: " + lojaB.nomeFantasia);
+            return lojaB;
         }
     }
 }

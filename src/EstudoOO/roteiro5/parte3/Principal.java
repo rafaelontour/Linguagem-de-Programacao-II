@@ -8,10 +8,11 @@ public class Principal {
         lojaA.setValorFat(10000);
         lojaB.setValorFat(20000);
 
-        Loja.comparar(lojaA, lojaB);
+        System.out.println((Loja.comparar(lojaA, lojaB)).getNomeFantasia());
+
     }
 
-    public void compararNaoEstatico(Loja lojaA, Loja lojaB) {
+    public static void compararEstatico(Loja lojaA, Loja lojaB) {
         if (lojaA.getValorFat() > lojaB.getValorFat()) {
             System.out.println("Mercado de maior faturamento: " + lojaA.getNomeFantasia());
         } else {

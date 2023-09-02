@@ -10,7 +10,6 @@ public class Loja {
 
 
     // Construtor
-
     public Loja(String nomeFantasia, String razaoSocial, String cnpj) {
         this.nomeFantasia = nomeFantasia;
         if (razaoSocial.equals("")) {
@@ -19,8 +18,8 @@ public class Loja {
         this.cnpj = cnpj;
     }
 
-    // Getters
 
+    // Getters
     public String getNomeFantasia() { return this.nomeFantasia; }
     public String getRazaoSocial() { return this.razaoSocial; }
     public String getCnpj() { return this.cnpj; }
@@ -29,7 +28,6 @@ public class Loja {
 
 
     // Setters
-
     public void setNomeFantasia(String nomeFantasia) { this.nomeFantasia = nomeFantasia; }
     public void setRazaoSocial(String razaoSocial) { this.razaoSocial = razaoSocial; }
     public void setCnpj(String cnpj) { this.cnpj = cnpj; }

@@ -14,7 +14,6 @@ public class Ligacao {
 
 
     // Construtor
-
     public Ligacao(String numOrigem, String numDestino, String localOrigem,
                    String localDestino, Tempo hmsINI, Tempo hmsFIM) {
         this.numOrigem    = numOrigem;
@@ -26,8 +25,8 @@ public class Ligacao {
         this.valor        = 0;
     }
 
-    // Getters
 
+    // Getters
     public String getNumOrigem()    { return this.numOrigem; }
     public String getNumDestino()   { return this.numDestino; }
     public String getLocalOrigem()  { return this.localOrigem; }
@@ -36,7 +35,6 @@ public class Ligacao {
 
 
     // Setters
-
     public void setNumOrigem(String numOrigem)       { this.numOrigem = numOrigem; }
     public void setNumDestino(String numDestino)     { this.numDestino = numDestino; }
     public void setLocalOrigem(String localOrigem)   { this.localOrigem = localOrigem; }
@@ -44,7 +42,6 @@ public class Ligacao {
 
 
     // Outros métodos
-
     public void verificarNum(String num) {
         if (num == numOrigem) {
             System.out.println("O número informado é o número de origem da ligação.");
@@ -55,19 +52,17 @@ public class Ligacao {
         }
     }
 
-    public int calcularValor(Tempo hmsINI, Tempo hmsFIM) {
-        int vMinutos = 0;
-        if (hmsINI.getHora() < hmsFIM.getHora()) { vMinutos += 60; }
-        if (hmsINI.getMinuto() < hmsFIM.getMinuto()) {
-            if (hmsINI.getSegundo() < hmsFIM.getSegundo()) {
-                vMinutos += hmsFIM.getMinuto() - hmsINI.getMinuto();
-            }
-        } else if (hmsINI.getMinuto() == hmsFIM.getMinuto()) {
-            if ((60 - hmsINI.getSegundo() + hmsFIM.getSegundo()) > 20) {
-                vMinutos++;
-            }
-        }
-        return vMinutos;
+    public int calcularValor(Tempo hmsINI, Tempo hmsFIM) {;
+        int valor = Tempo.calcularTempo(hmsINI, hmsFIM);
+        return valor;
+    }
 
+    public int calcularValorF(Tempo hmsINI, Tempo hmsFIM) {;
+        int valor = Tempo.calcularTempo(hmsINI, hmsFIM);
+        if (!(valor % 60 == 0)) {
+            valor++;
+        }
+
+        return valor;
     }
 }
