@@ -11,13 +11,13 @@ public class Aluno {
 
 
     // Construtor
-    Aluno() {
-//        matricula     = pMatricula;
-//        nome          = pNome;
-//        curso         = pCurso;
-//        anoIngresso   = pAnoIngresso;
-//        qtdDisciplina = 0;
-//        situacao      = "Não matriculado";
+    Aluno(int pMatricula, String pNome, String pCurso, int pAnoIngresso) {
+        matricula     = pMatricula;
+        nome          = pNome;
+        curso         = pCurso;
+        anoIngresso   = pAnoIngresso;
+        qtdDisciplina = 0;
+        situacao      = "Não matriculado";
     }
 
     // Getters
