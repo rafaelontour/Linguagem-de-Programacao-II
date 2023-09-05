@@ -43,9 +43,9 @@ public class Principal {
             System.out.println("********************************");
         }
 
-        Aluno.adicionarDisciplina("Carlos", "Matemática", listaAlunos);
-        Aluno.adicionarDisciplina("Carlos", "História", listaAlunos);
-        Aluno.listarDisciplinas("Carlos", listaAlunos);
+        Aluno.adicionarDisciplina("Gabriel", "Matemática", listaAlunos);
+        Aluno.adicionarDisciplina("Gabriel", "História", listaAlunos);
+        Aluno.listarDisciplinas("Gabriel", listaAlunos);
 
         System.out.println("\n\n           Lista de alunos");
         System.out.println("*************************************");
