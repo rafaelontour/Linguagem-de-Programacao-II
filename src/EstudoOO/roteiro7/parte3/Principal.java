@@ -1,7 +1,7 @@
-package EstudoOO.roteiro7.parte2;
+package EstudoOO.roteiro7.parte3;
 
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
@@ -43,6 +43,10 @@ public class Principal {
             System.out.println("********************************");
         }
 
+        Aluno.adicionarDisciplina("Gabriel", "Matemática", listaAlunos);
+        Aluno.adicionarDisciplina("Gabriel", "História", listaAlunos);
+        Aluno.listarDisciplinas("Gabriel", listaAlunos);
+
         System.out.println("\n\n           Lista de alunos");
         System.out.println("*************************************");
         for (int i = listaAlunos.size() - 1;i >= 0;i--) {
@@ -50,6 +54,7 @@ public class Principal {
             System.out.println("Nome: " + listaAlunos.get(i).getNome());
             System.out.println("Curso: " + listaAlunos.get(i).getCurso());
             System.out.println("Ano de ingresso: " + listaAlunos.get(i).getAnoIngresso());
+            System.out.println("Quantidade de disciplinas: " + listaAlunos.get(i).getQtdDisciplina());
             System.out.println("********************************");
         }
     }

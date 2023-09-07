@@ -9,12 +9,12 @@ public class Aluno {
     private String situacao;
 
     Aluno(int pMatricula, String pNome, String pCurso, int pAnoIngresso){
-        matricula = pMatricula;
-        nome = pNome;
-        curso = pCurso;
-        anoIngresso = pAnoIngresso;
+        matricula     = pMatricula;
+        nome          = pNome;
+        curso         = pCurso;
+        anoIngresso   = pAnoIngresso;
         qtdDisciplina = 0;
-        situacao = "Não matriculado";
+        situacao      = "Não matriculado";
     }
 
     public int getMatricula() {
