@@ -14,14 +14,7 @@ public class Aluno {
 
 
     // Construtor
-    Aluno() {
-//        matricula     = pMatricula;
-//        nome          = pNome;
-//        curso         = pCurso;
-//        anoIngresso   = pAnoIngresso;
-//        qtdDisciplina = 0;
-//        situacao      = "Não matriculado";
-    }
+    Aluno() {}
 
     // Getters
     public int getMatricula() {
@@ -58,26 +51,34 @@ public class Aluno {
 
 
     // Outros métodos
-    public static void adicionarDisciplina(String nome, String d, ArrayList<Aluno> lista) {
-        for (int c = lista.size() -1 ;c >= 0;c--) {
-            if (lista.get(c).getNome().equals(nome)) {
-                lista.get(c).listaDisciplinas.add(d);
-                lista.get(c).setQtdDisciplina(lista.get(c).listaDisciplinas.size());
-            }
-        }
+    public void adicionarDisciplina(Aluno aluno, String d, ArrayList<Aluno> lista) {
+
+        aluno.listaDisciplinas.add(d);
+        aluno.setQtdDisciplina(aluno.listaDisciplinas.size());
     }
 
-    public static void listarDisciplinas(String nome, ArrayList<Aluno> lista) {
-        for (int c = lista.size() - 1;c >= 0;c--) {
-            if (lista.get(c).getNome().equals(nome) && lista.get(c).listaDisciplinas.size() != 0) {
+    public void listarDisciplinas(Aluno aluno, ArrayList<Aluno> lista) {
+
+            if (aluno.listaDisciplinas.size() != 0) {
                 System.out.println("\n           Lista de disciplina de " + nome);
-                for (int i = lista.get(c).listaDisciplinas.size() - 1;i >= 0;i--) {
-                        System.out.println(lista.get(c).listaDisciplinas.get(i));
+                for (int i = aluno.listaDisciplinas.size() - 1;i >= 0;i--) {
+                        System.out.println(aluno.listaDisciplinas.get(i));
                 }
             } else {
                 System.out.println("Sem disciplinas para listar");
             }
+
+    }
+
+    public static Aluno consultar(String aluno, ArrayList<Aluno> lista) {
+        Aluno aux = null;
+        for (int c = lista.size() - 1;c >= 0;c--) {
+            if (lista.get(c).getNome().equals(aluno)) {
+                aux = lista.get(c);
+
+            }
         }
+        return aux;
 
     }
 }

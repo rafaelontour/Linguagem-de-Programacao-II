@@ -28,7 +28,7 @@ public class Cliente {
 
 
     // Setters
-    public void setCpf_cnpf(Strig cpf_cnpj) { this.cpf_cnpj = cpf_cnpj; }
+    public void setCpf_cnpf(String cpf_cnpj) { this.cpf_cnpj = cpf_cnpj; }
     public void setNome(String nome) { this.nome = nome; }
     public void setEndereco(String endereco) { this.endereco = endereco; }
     public void setEmail(String email) { this.email = email; }

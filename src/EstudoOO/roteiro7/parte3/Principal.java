@@ -9,6 +9,8 @@ public class Principal {
         ArrayList<Aluno> listaAlunos = new ArrayList<>();
         Scanner entrada = new Scanner(System.in);
 
+        Aluno helano = new Aluno();
+
         while (true) {
             int i = 0;
             int in;
@@ -42,10 +44,10 @@ public class Principal {
 
             System.out.println("********************************");
         }
-
-        Aluno.adicionarDisciplina("Gabriel", "Matemática", listaAlunos);
-        Aluno.adicionarDisciplina("Gabriel", "História", listaAlunos);
-        Aluno.listarDisciplinas("Gabriel", listaAlunos);
+        Aluno objAl = Aluno.consultar("Carlos", listaAlunos);
+        objAl.adicionarDisciplina(objAl, "Matemática", listaAlunos);
+        objAl.adicionarDisciplina(objAl, "História", listaAlunos);
+        objAl.listarDisciplinas(objAl, listaAlunos);
 
         System.out.println("\n\n           Lista de alunos");
         System.out.println("*************************************");
