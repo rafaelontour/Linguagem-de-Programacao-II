@@ -1,4 +1,4 @@
-package EstudoOO.roteiro8.parte1;
+package EstudoOO.roteiro8.parte2;
 
 public class Cliente {
 
