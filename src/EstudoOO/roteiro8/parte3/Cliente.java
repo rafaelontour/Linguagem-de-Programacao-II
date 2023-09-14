@@ -10,12 +10,10 @@ public class Cliente {
     private String endereco;
     private String email;
     private String telefone;
-    private VeiculoPasseio veiculo;
-    private VeiculoCarga veiculo2;
-    private VeiculoPequeno veiculo3;
+    private Veiculo veiculo;
 
     // Construtor
-    public Cliente(String cpf_cnpj, String nome, String endereco, String email, String telefone, VeiculoPasseio veiculo) {
+    public Cliente(String cpf_cnpj, String nome, String endereco, String email, String telefone, Veiculo veiculo) {
         this.cpf_cnpj = cpf_cnpj;
         this.nome = nome;
         this.endereco = endereco;
@@ -24,23 +22,13 @@ public class Cliente {
         this.veiculo = veiculo;
     }
 
-    public Cliente(String cpf_cnpj, String nome, String endereco, String email, String telefone, VeiculoCarga veiculo) {
+    public Cliente(String cpf_cnpj, String nome, String endereco, String email, String telefone) {
         this.cpf_cnpj = cpf_cnpj;
         this.nome = nome;
         this.endereco = endereco;
         this.email = email;
         this.telefone = telefone;
-        this.veiculo2 = veiculo;
-    }
-
-    public Cliente(String cpf_cnpj, String nome, String endereco, String email, String telefone, VeiculoPequeno veiculo) {
-        this.cpf_cnpj = cpf_cnpj;
-        this.nome = nome;
-        this.endereco = endereco;
-        this.email = email;
-        this.telefone = telefone;
-        this.veiculo3 = veiculo;
-    }
+     }
 
     // Getters
     public String getCpf_cnpj() { return this.cpf_cnpj; }
