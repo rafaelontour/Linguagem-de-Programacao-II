@@ -1,7 +1,5 @@
 package EstudoOO.roteiro8.parte3;
 
-import EstudoOO.roteiro8.parte1.Veiculo;
-
 public class Cliente {
 
     // Atributos
@@ -36,9 +34,7 @@ public class Cliente {
     public String getEndereco() { return this.endereco; }
     public String getEmail() { return this.email; }
     public String getTelefone() { return this.telefone; }
-    public VeiculoPasseio getVeiculo() { return this.veiculo; }
-    public VeiculoCarga getVeiculo2() { return this.veiculo2; }
-    public VeiculoPequeno getVeiculo3() { return this.veiculo3; }
+    public Veiculo getVeiculo() { return this.veiculo; }
 
     // Setters
     public void setNome(String nome) { this.nome = nome; }
@@ -46,4 +42,6 @@ public class Cliente {
     public void setEndereco(String endereco) { this.endereco = endereco; }
     public void setEmail(String email) { this.email = email; }
     public void setTelefone(String telefone) { this.telefone = telefone; }
+
+    public void setVeiculo(Veiculo veiculo) { this.veiculo = veiculo; }
 }

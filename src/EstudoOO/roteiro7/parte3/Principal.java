@@ -44,9 +44,13 @@ public class Principal {
 
             System.out.println("********************************");
         }
+
         Aluno objAl = Aluno.consultar("Carlos", listaAlunos);
+        Aluno objAl02 = Aluno.consultar("Hugo", listaAlunos);
         objAl.adicionarDisciplina(objAl, "Matemática", listaAlunos);
         objAl.adicionarDisciplina(objAl, "História", listaAlunos);
+        objAl02.adicionarDisciplina(objAl02, "Cálculo 2", listaAlunos);
+
         objAl.listarDisciplinas(objAl, listaAlunos);
 
         System.out.println("\n\n           Lista de alunos");
@@ -57,6 +61,7 @@ public class Principal {
             System.out.println("Curso: " + listaAlunos.get(i).getCurso());
             System.out.println("Ano de ingresso: " + listaAlunos.get(i).getAnoIngresso());
             System.out.println("Quantidade de disciplinas: " + listaAlunos.get(i).getQtdDisciplina());
+            System.out.println("Situação: " + listaAlunos.get(i).getSituacao());
             System.out.println("********************************");
         }
     }

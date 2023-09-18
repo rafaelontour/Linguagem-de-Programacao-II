@@ -2,6 +2,7 @@ package EstudoOO.roteiro7.parte2;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Principal {
     public static void main(String[] args) {
@@ -45,6 +46,9 @@ public class Principal {
 
         System.out.println("\n\n           Lista de alunos");
         System.out.println("*************************************");
+
+    
+
         for (int i = listaAlunos.size() - 1;i >= 0;i--) {
             System.out.println("Matrícula: " + listaAlunos.get(i).getMatricula());
             System.out.println("Nome: " + listaAlunos.get(i).getNome());

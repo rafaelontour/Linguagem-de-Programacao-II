@@ -30,6 +30,7 @@ public class Aluno {
     public int getQtdDisciplina() {
         return this.qtdDisciplina;
     }
+    public String getSituacao() { return this.situacao; }
 
 
     // Setters
@@ -48,6 +49,7 @@ public class Aluno {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
 
 
     // Outros métodos
